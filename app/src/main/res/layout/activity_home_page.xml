@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".HomePageActivity">
+
+  <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:cardBackgroundColor="@color/white"
+      app:cardElevation="@dimen/_50sdp"
+      app:cardCornerRadius="5dp"
+      android:layout_marginBottom="@dimen/_5sdp"
+      >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        >
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+         android:textStyle="bold"
+          android:gravity="center"
+          android:text="Quotes Catogery"
+          android:textAlignment="center"
+          android:textColor="@color/black"
+          android:textSize="@dimen/_23ssp" />
+
+
+    </LinearLayout>
+
+  </androidx.cardview.widget.CardView>
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/_5sdp"
+
+      android:id="@+id/recyclerview"/>
+
+
+</LinearLayout>
