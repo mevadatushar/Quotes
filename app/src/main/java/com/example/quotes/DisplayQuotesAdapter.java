@@ -20,6 +20,7 @@ import java.util.ArrayList;
 public class DisplayQuotesAdapter  extends RecyclerView.Adapter<DisplayQuotesAdapter.MyviewHolder> {
 
     QuotesActivity quotesActivity;
+    private int currentImageIndex = 0;
     ArrayList<DisplayQuotesModal> displayQuotes;
     ArrayList<DisplayQuotesModal> backgroundImage;
 
@@ -43,7 +44,14 @@ public class DisplayQuotesAdapter  extends RecyclerView.Adapter<DisplayQuotesAda
         int i = position;
         holder.txtDisplayQuotes.setText(displayQuotes.get(i).getDisplayQuotes());
         holder.imgQuotesBackgroungImage.setImageResource(backgroundImage.get(i).getBackgroundImage());
-
+        holder.imgQuotesBackgroungImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Increment index to show the next image
+                currentImageIndex = (currentImageIndex + 1) % backgroundImage.size();
+                holder.imgQuotesBackgroungImage.setImageResource(backgroundImage.get(currentImageIndex).getBackgroundImage());
+            }
+        });
         holder.btnCopy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
