@@ -63,6 +63,7 @@ public class HomePageAdapter extends RecyclerView.Adapter<HomePageAdapter.Myview
     public class MyviewHolder extends RecyclerView.ViewHolder {
 
         ImageView imgIconHomePage;
+
         TextView txtTextHomePage;
 
         public MyviewHolder(@NonNull View itemView) {
